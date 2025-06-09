@@ -15,8 +15,11 @@ app.use(express.json());
 // Serve static files for uploads
 app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
+const addproductRouter = require("./Routes/products");
+
 // Routes
 app.use('/api/users/', userRoutes);
+app.use('/api/products', addproductRouter);
 
 // MongoDB connection string
 const connectionString = process.env.CONNECTION_STRING;
