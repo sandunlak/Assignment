@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve static files for uploads
+
 app.use('/uploads', express.static(path.join(__dirname, 'Uploads')));
 
 const addproductRouter = require("./Routes/products");

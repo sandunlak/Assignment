@@ -25,7 +25,7 @@ router.route("/addproduct").post((req, res) => {
 
 // Fetch all products
 router.route("/showproduct").get((req, res) => {
-    Product.find() // Fetch all products
+    Product.find() 
         .then((products) => {
             res.json(products);
         })
@@ -55,7 +55,7 @@ router.route("/delete/:id").delete(async (req, res) => {
 // Update a product
 router.route("/update/:id").put(async (req, res) => {
     const productId = req.params.id;
-    const { name, price, quantity } = req.body; // Updated to match addproduct fields
+    const { name, price, quantity } = req.body; 
 
     const updateProduct = {
         name,
